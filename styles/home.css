@@ -1,1 +1,56 @@
-/* add home page styles here */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+body{
+    font-family:'Open Sans', sans-serif;
+}
+p{
+    text-align: center;
+    font-weight: bold;
+}
+.radio-button-section{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+.throw-result{
+    text-align: center;
+    font-size: 1.4rem;
+}
+button{
+    background-color: lightblue;
+    border-radius: 5px; 
+    font-size: 1.3rem;
+    margin-bottom: 10px; 
+    height: 50px;
+    width: 80px;
+}
+.button-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.lower-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+label img{
+    border: 1px solid black;
+    height: 150px;
+    width: 150px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+input{
+    display: none;
+}
+input:checked + img {
+    border: 2px solid red;
+}
+.who-won{
+    font-size: 1.4rem;
+}
+.wins-losses-draws > div{
+    margin: 10px;
+    font-size: 1.2rem;
+}
