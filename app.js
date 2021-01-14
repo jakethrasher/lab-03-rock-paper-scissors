@@ -2,7 +2,7 @@ import { getRandomThrow } from './get-random-throw.js';
 import { didUserWin } from './did-user-win.js';
 
 const playButton = document.getElementById('play');
-const throwResult = document.getElementById('throw-result');
+const computerThrowSpan = document.getElementById('comp-throw');
 const winsSpan = document.getElementById('wins-span');
 const lossesSpan = document.getElementById('losses-span');
 const drawsSpan = document.getElementById('draws-span');
@@ -18,13 +18,14 @@ playButton.addEventListener('click', () => {
     totalPlays++;
 
     const userThrow = document.querySelector('input[type="radio"]:checked');
-
-    let computerThrow = getRandomThrow();
+    
+    let randomNum = Math.ceil(Math.random() * 3);
+    
+    let computerThrow = getRandomThrow(randomNum);
 
     let winOrLose = didUserWin(userThrow.value, computerThrow);
 
-    throwResult.textContent = computerThrow;
-
+    computerThrowSpan.textContent = `The computer threw ${computerThrow}`;
 
     if (winOrLose === 'win') {
         wins++;

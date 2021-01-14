@@ -2,14 +2,18 @@
 body{
     font-family:'Open Sans', sans-serif;
 }
-.throw-result{
-    height: 75px;
-    width: 100px;
+p{
     text-align: center;
-    font
+    font-weight: bold;
 }
-#throw-result{
-    font-size: 1.5rem;
+.radio-button-section{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+.throw-result{
+    text-align: center;
+    font-size: 1.4rem;
 }
 button{
     background-color: lightblue;
@@ -24,11 +28,18 @@ button{
     align-items: center;
     justify-content: center;
 }
+.lower-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
 label img{
     border: 1px solid black;
     height: 150px;
     width: 150px;
-    margin-bottom: 8px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 input{
     display: none;
@@ -38,4 +49,8 @@ input:checked + img {
 }
 .who-won{
     font-size: 1.4rem;
+}
+.wins-losses-draws > div{
+    margin: 10px;
+    font-size: 1.2rem;
 }
