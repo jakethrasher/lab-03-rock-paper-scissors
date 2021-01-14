@@ -1,5 +1,5 @@
 import { getRandomThrow } from './get-random-throw.js';
-import { didUserWin } from './utils.js';
+import { didUserWin } from './did-user-win.js';
 
 const playButton = document.getElementById('play');
 const throwResult = document.getElementById('throw-result');
@@ -18,18 +18,24 @@ playButton.addEventListener('click', () => {
     totalPlays++;
 
     const userThrow = document.querySelector('input[type="radio"]:checked');
+
     let computerThrow = getRandomThrow();
+
     let winOrLose = didUserWin(userThrow.value, computerThrow);
+
     throwResult.textContent = computerThrow;
-   
-    
+
+
     if (winOrLose === 'win') {
         wins++;
         winsSpan.textContent = `${wins}`;
-    } else if (winOrLose === 'lose') {
-        lossesSpan.textContent = `${totalPlays - wins}`;
+        whoWon.textContent = 'You won!!';
     } else if (winOrLose === 'draw') {
-        draws ++;
+        draws++;
         drawsSpan.textContent = `${draws}`;
-    }
+        whoWon.textContent = 'Its a draw!!';
+    } else if (winOrLose === 'lose') {
+        lossesSpan.textContent = `${totalPlays - (wins + draws)}`;
+        whoWon.textContent = 'You lost!!';
+    } 
 });

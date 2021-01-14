@@ -5,11 +5,3 @@ export function getRandomThrow() {
     if (randomNum === 2) return 'paper';
     if (randomNum === 3) return 'scissors';
 }
-
-
-
-     
-
-
-
-

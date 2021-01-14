@@ -1,23 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-
 body{
     font-family:'Open Sans', sans-serif;
 }
 .throw-result{
     height: 75px;
     width: 100px;
-    text-align: center
+    text-align: center;
+    font
+}
+#throw-result{
+    font-size: 1.5rem;
 }
 button{
+    background-color: lightblue;
+    border-radius: 5px; 
+    font-size: 1.3rem;
     margin-bottom: 10px; 
+    height: 50px;
+    width: 80px;
+}
+.button-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 label img{
+    border: 1px solid black;
     height: 150px;
     width: 150px;
+    margin-bottom: 8px;
 }
 input{
     display: none;
 }
 input:checked + img {
     border: 2px solid red;
+}
+.who-won{
+    font-size: 1.4rem;
 }

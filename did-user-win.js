@@ -6,8 +6,3 @@ export function didUserWin(player, computer) {
     else return 'lose';
 }
 
-// export function showComputerThrowImg(throw, element){
-//     if ( throw === 'rock') element.src="./assets/rock.png";
-//     if ( throw === 'paper') element.src="./assets/paper.png";
-//     if ( throw === 'scissors') element.src="./assets/scissors.png";
-// }
