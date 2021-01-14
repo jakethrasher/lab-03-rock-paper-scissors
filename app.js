@@ -1,4 +1,5 @@
-import { getRandomThrow, didUserWin } from './get-random-throw.js';
+import { getRandomThrow } from './get-random-throw.js';
+import { didUserWin } from './utils.js';
 
 const playButton = document.getElementById('play');
 const throwResult = document.getElementById('throw-result');
@@ -20,7 +21,7 @@ playButton.addEventListener('click', () => {
     let computerThrow = getRandomThrow();
     let winOrLose = didUserWin(userThrow.value, computerThrow);
     throwResult.textContent = computerThrow;
-    console.log(userThrow.value, computerThrow)
+   
     
     if (winOrLose === 'win') {
         wins++;

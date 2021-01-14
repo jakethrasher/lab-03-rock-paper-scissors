@@ -11,3 +11,13 @@ body{
 button{
     margin-bottom: 10px; 
 }
+label img{
+    height: 150px;
+    width: 150px;
+}
+input{
+    display: none;
+}
+input:checked + img {
+    border: 2px solid red;
+}
