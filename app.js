@@ -28,20 +28,7 @@ playButton.addEventListener('click', () => {
     } else if (winOrLose === 'lose') {
         lossesSpan.textContent = `${totalPlays - wins}`;
     } else if (winOrLose === 'draw') {
-        draw ++;
+        draws ++;
         drawsSpan.textContent = `${draws}`;
     }
-
-    
-
-
-
-
-
-    //increment totalPlays
-    //import getRandomThrow which returns rock paper or sciccors
-    //import didUserWin which compares computer throw to user throw
-    //user throw is input.value
-    //if user wins increment wins
-    //display who won and change textContent of wins losses and draws span
 });
